@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlpgg86l385k5"]
+[gd_scene load_steps=7 format=3 uid="uid://dlpgg86l385k5"]
 
 [ext_resource type="Texture2D" uid="uid://dw844pgpu1tol" path="res://assets/Background/Green.png" id="1_q77l0"]
 [ext_resource type="Texture2D" uid="uid://b01f3t2roij0b" path="res://assets/Terrain/Terrain (16x16).png" id="2_ftpgt"]
 [ext_resource type="PackedScene" uid="uid://tmhypi6mcp7k" path="res://scenes/main_character.tscn" id="3_wjxgb"]
+[ext_resource type="PackedScene" uid="uid://c3kygmxoabmsv" path="res://scenes/collectable.tscn" id="4_aqu4j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pdvet"]
 texture = ExtResource("2_ftpgt")
@@ -481,3 +482,12 @@ position = Vector2(133, 86)
 position = Vector2(38, 47)
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
+
+[node name="Collectable" parent="." instance=ExtResource("4_aqu4j")]
+position = Vector2(506, 401)
+
+[node name="Collectable2" parent="." instance=ExtResource("4_aqu4j")]
+position = Vector2(745, 257)
+
+[node name="Collectable3" parent="." instance=ExtResource("4_aqu4j")]
+position = Vector2(505, 113)
