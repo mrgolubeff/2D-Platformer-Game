@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dlpgg86l385k5"]
+[gd_scene load_steps=8 format=3 uid="uid://dlpgg86l385k5"]
 
 [ext_resource type="Texture2D" uid="uid://dw844pgpu1tol" path="res://assets/Background/Green.png" id="1_q77l0"]
 [ext_resource type="Texture2D" uid="uid://b01f3t2roij0b" path="res://assets/Terrain/Terrain (16x16).png" id="2_ftpgt"]
 [ext_resource type="PackedScene" uid="uid://tmhypi6mcp7k" path="res://scenes/main_character.tscn" id="3_wjxgb"]
 [ext_resource type="PackedScene" uid="uid://c3kygmxoabmsv" path="res://scenes/collectable.tscn" id="4_aqu4j"]
+[ext_resource type="Script" path="res://scenes/game_manager.gd" id="5_yhy5g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pdvet"]
 texture = ExtResource("2_ftpgt")
@@ -488,3 +489,7 @@ position = Vector2(745, 257)
 
 [node name="Collectable3" parent="." instance=ExtResource("4_aqu4j")]
 position = Vector2(505, 113)
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_yhy5g")
