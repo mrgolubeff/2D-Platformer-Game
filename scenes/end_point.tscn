@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dm4vax2f285dc"]
+[gd_scene load_steps=4 format=3 uid="uid://dm4vax2f285dc"]
 
+[ext_resource type="Script" path="res://scenes/end_point.gd" id="1_cpnte"]
 [ext_resource type="Texture2D" uid="uid://gj85ewtjd3wp" path="res://assets/Items/Checkpoints/End/End (Idle).png" id="1_kogbp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_55xyc"]
 size = Vector2(34, 43)
 
 [node name="EndTrophy" type="Area2D"]
+script = ExtResource("1_cpnte")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -14,3 +16,5 @@ texture = ExtResource("1_kogbp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 10.5)
 shape = SubResource("RectangleShape2D_55xyc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

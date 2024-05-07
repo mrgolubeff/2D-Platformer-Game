@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bv3wophsn3jp"]
+[gd_scene load_steps=10 format=3 uid="uid://bv3wophsn3jp"]
 
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="1_bnhdj"]
 [ext_resource type="Texture2D" uid="uid://cxdbn8xq5ayl3" path="res://assets/Background/Pink.png" id="2_v313x"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://tmhypi6mcp7k" path="res://scenes/main_character.tscn" id="4_b0se1"]
 [ext_resource type="PackedScene" uid="uid://c3kygmxoabmsv" path="res://scenes/collectable.tscn" id="5_clhkc"]
 [ext_resource type="PackedScene" uid="uid://dm4vax2f285dc" path="res://scenes/end_point.tscn" id="6_ur77s"]
+[ext_resource type="PackedScene" uid="uid://du6s4joeh6yye" path="res://scenes/main_menu.tscn" id="7_1tv4n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pdvet"]
 texture = ExtResource("3_5barj")
@@ -522,6 +523,7 @@ position = Vector2(1490, 529)
 
 [node name="EndTrophy" parent="SceneObjects" instance=ExtResource("6_ur77s")]
 position = Vector2(2806, 545)
+target_level = ExtResource("7_1tv4n")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
